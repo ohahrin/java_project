@@ -2,3 +2,19 @@
 .project
 /.settings/
 .classpath
+
+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
+
+local repo(master).		remote repo(origin).
+
+Hello.java				Hello.java
+Hello.class
+
+.gitignore
+/bin/
+
+jdk설치
+eclipse설치
+git 클론
+은행 app 마무리.
+commit/push

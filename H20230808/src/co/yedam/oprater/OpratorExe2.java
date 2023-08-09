@@ -22,22 +22,34 @@ public class OpratorExe2 {
 				System.out.print("입금액 입력>> ");
 				//코드 작성
 				int num = Integer.parseInt(scn.nextLine());
-				if(balance > 100000) {
-					System.out.println("10만원 이상 입금할 수 없습니다");
-					
+				if(balance + num > 100000 || num < 0) {
+					System.out.println("입금 불가");
+				}else {
+					balance = num + balance;
+					//balance += num;
 				}
 			}else if (menu == 2) {
 				System.out.print("출금액 입력>> ");
 				//코드 작성
+				int num = Integer.parseInt(scn.nextLine());
+				if(balance < num ){
+					System.out.println("출금 불가");
+				}else {
+					balance -= num;
+					// balance = balance - num;
+				}
 			}else if (menu == 3) {
 				System.out.print("잔고액 입력>> ");
 				//코드작성
+				System.out.println("잔액은" + balance + "입니다");
 			}else if (menu == 4) {
 				//코드 작성
 				System.out.print("종료 입력>> ");
 				break;
 			}
 			
-		System.out.println("end of prog.")
+		}
+		// 반복문이 끝났을 때 출력
+		System.out.println("end of prog.");
 	}
 }
