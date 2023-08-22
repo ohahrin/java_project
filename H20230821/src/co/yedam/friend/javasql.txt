@@ -1,0 +1,29 @@
+create user proj identified by proj;
+alter user proj default tablespace users 
+quota unlimited on users;
+grant connect, resource to proj;
+
+
+create table board(
+ brd_no number primary key,
+ brd_title varchar2(50) not null,
+ brd_content varchar2(500) not null,
+ brd_writer varchar2(30) not null,
+ write_date date default sysdate,
+ update_date date default sysdate
+);
+
+
+
+
+게시판 앱.
+글쓰기, 내용 수정, 삭제, 목록(페이징) 종료.
+
+항목 :
+글번호/ 제목/ 내용/ 작성자/ 작성일자/ 수정일자
+
+jdbc 활용.
+
+user1 1111 홍길동
+user2 2222 김길동
+user3 3333 박길동
